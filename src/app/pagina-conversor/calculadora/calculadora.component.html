@@ -1,0 +1,11 @@
+<div class="bg-color" >
+      <h3>Medida a ser convertida:{{valor}}</h3>
+      <form [formGroup]="formConv" (ngSubmit)="calcularConv(+valorInput.value)">
+        <mat-form-field class="example-full-width">
+          <input matInput formControlName="valorInput" #valorInput [value]="resultadoConv.value">
+        </mat-form-field>
+        {{valor}}
+        <br>
+        <button mat-raised-button color="primary" type="submit">Converter</button>
+      </form>
+</div>

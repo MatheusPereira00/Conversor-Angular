@@ -9,12 +9,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { PaginaConversorComponent } from './pagina-conversor/pagina-conversor.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CalculadoraComponent } from './pagina-conversor/calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PaginaConversorComponent
+    PaginaConversorComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,

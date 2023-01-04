@@ -5,7 +5,7 @@ import { PaginaConversorComponent } from './pagina-conversor/pagina-conversor.co
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'conversor', component: PaginaConversorComponent},
+  { path: 'conversor/:valor1/:valor2', component: PaginaConversorComponent},
   { path: '**', component: HomeComponent}
 ];
 
