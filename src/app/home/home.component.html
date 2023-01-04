@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Escolha uma calculadora</h1>
+      <br>
+      <h3>Conversor de temperaturas</h3>
+      <br>
+    </div>
+    <form [formGroup]="formTemperatura" (ngSubmit)="converterTemperatura()">
+      <div class="col-6">
+        <mat-form-field appearance="fill">
+          <mat-label>Converter de:</mat-label>
+          <mat-select formControlName="converterDeTemperatura" [(value)]="formTemperatura.value.converterDeTemperatura">
+            <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">
+              {{temperatura}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="fill">
+          <mat-label>Converter para:</mat-label>
+          <mat-select formControlName="converterParaTemperatura" [(value)]="formTemperatura.value.converterParaTemperatura">
+            <mat-option *ngFor="let temperatura of temperaturas" [value]="temperatura">
+              {{temperatura}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <button mat-raised-button color="primary" type="submit">Converter temperatura</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+  <div class="col-12">
+  <br>
+  <h4>Conversor de Medidas</h4>
+    <form [formGroup]="FormMedida" (ngSubmit)="converterMedida()">
+      <div class="col-6">
+        <mat-form-field appearance="fill">
+          <mat-label>Converter de:</mat-label>
+          <mat-select formControlName="converterDeMedida" [(value)]="FormMedida.value.converterDeMedida">
+            <mat-option *ngFor="let Medida of Medidas " [value]="Medida">
+              {{Medida}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="fill">
+          <mat-label>Converter para:</mat-label>
+          <mat-select formControlName="converterParaMedida" [(value)]="FormMedida.value.converterParaMedida">
+            <mat-option *ngFor="let Medida of Medidas" [value]="Medida">
+              {{Medida}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-12">
+        <button mat-raised-button color="primary" type="submit">Converter Medida</button>
+    </div>
+  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <br>
+      <h4>Conversor de Peso</h4>
+      <form [formGroup]="FormPeso" (ngSubmit)="converterPeso()">
+        <div class="col-6">
+          <mat-form-field appearance="fill">
+            <mat-label>Converter de:</mat-label>
+            <mat-select formControlName="converterDePeso" [(value)]="FormPeso.value.converterDePeso">
+              <mat-option *ngFor="let Peso of Pesos " [value]="Peso">
+                {{Peso}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <mat-form-field appearance="fill">
+            <mat-label>Converter para:</mat-label>
+            <mat-select formControlName="converterParaPeso" [(value)]="FormPeso.value.converterParaPeso">
+              <mat-option *ngFor="let Peso of Pesos" [value]="Peso">
+                {{Peso}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-12">
+          <button mat-raised-button color="primary" type="submit">Converter Medida</button>
+      </div>
+    </form>
+  </div>
+</div>
