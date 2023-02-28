@@ -2,7 +2,7 @@
       <h3>Medida a ser convertida:{{valor}}</h3>
       <form [formGroup]="formConv" (ngSubmit)="calcularConv(+valorInput.value)">
         <mat-form-field class="example-full-width">
-          <input matInput formControlName="valorInput" #valorInput [value]="resultadoConv.value">
+          <input matInput formControlName="valorInput" #valorInput [value]="">
         </mat-form-field>
         {{valor}}
         <br>
